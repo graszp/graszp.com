@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<!-- graszp.com home page. Hand-written; published by GitHub Pages from github.com/graszp/graszp.com (D-006). -->
+<!-- graszp.com home page. Hand-written; published by GitHub Pages from github.com/graszp/graszp.com (D-006).
+     Source of the "Where graszp fits" section: vault note 94.06.01 Influences on graszp (D-008). -->
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
     <meta name="ROBOTS" content="ALL">
     <meta name="Copyright" content="Vernacular Cloud LLC">
-    <meta name="description" content="graszp, a solution architecture method for working with AI."/>
+    <meta name="description" content="graszp is a lightweight solution architecture method for working with an AI assistant: the whole project in one markdown note, kept current by a simple session loop."/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>graszp</title>
+    <title>graszp: a solution architecture method for working with AI</title>
     <link rel="canonical" href="https://graszp.com/">
     <meta property="og:site_name" content="graszp">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="graszp">
-    <meta property="og:description" content="graszp, a solution architecture method for working with AI.">
+    <meta property="og:title" content="graszp: grasp the whole project in one note">
+    <meta property="og:description" content="A lightweight solution architecture method for working with an AI assistant.">
     <meta property="og:url" content="https://graszp.com/">
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/graszp.css">
@@ -21,6 +22,49 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sumana">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Code Pro">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://graszp.com/#website",
+          "url": "https://graszp.com/",
+          "name": "graszp",
+          "description": "A lightweight solution architecture method for working with an AI assistant.",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://vernacular.cloud/#organization" }
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://graszp.com/#method",
+          "name": "graszp",
+          "alternateName": "graszp solution architecture method",
+          "description": "The whole project in one markdown note, with a fixed outline distilled from TOGAF, ArchiMate, PRINCE2, Scrum, ITIL and the Microsoft Solutions Framework, kept current by a session loop between author and AI assistant.",
+          "url": "https://graszp.com/",
+          "dateModified": "2026-11-06",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "author": { "@type": "Person", "name": "Joe Klemke", "sameAs": ["https://github.com/jklemke", "https://www.linkedin.com/in/joeklemke/"] },
+          "publisher": { "@id": "https://vernacular.cloud/#organization" },
+          "keywords": ["solution architecture", "AI assistant", "project management", "TOGAF", "ArchiMate", "PRINCE2", "Scrum", "arc42", "markdown"],
+          "hasPart": {
+            "@type": "DigitalDocument",
+            "name": "graszp SAN template v0.1",
+            "url": "https://graszp.com/template/graszp-san-template.md",
+            "encodingFormat": "text/markdown",
+            "license": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://vernacular.cloud/#organization",
+          "name": "Vernacular Cloud LLC",
+          "url": "https://vernacular.cloud/",
+          "sameAs": ["https://github.com/graszp"]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
 
@@ -28,19 +72,74 @@
       <h1><a href="/">graszp</a></h1>
       <nav>
         <ul class="navlist">
-          <li><a href="/">Home</a></li>
-          <li><a href="https://vernacular.cloud/method/">vernacular.cloud</a></li>
+          <li><a href="#what">What it is</a></li>
+          <li><a href="#loop">The session loop</a></li>
+          <li><a href="#template">Template</a></li>
+          <li><a href="#fits">Where it fits</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Hello, world</h1>
-      <p>graszp, a solution architecture method for working with AI. Coming soon.</p>
+      <h1>Grasp the whole project in one note</h1>
+      <p><strong>graszp</strong> is a lightweight solution architecture method for working with an AI assistant.</p>
+
+      <h2 id="what">What it is</h2>
+      <p>A whole project lives in one markdown note, the <em>Solution Architecture Note</em> (SAN). Its fixed outline is distilled from TOGAF, ArchiMate, PRINCE2, Scrum, ITIL and the Microsoft Solutions Framework: why the work matters, who it is for, the plan from business down to technology, the decisions, the delivery, and the sprints.</p>
+      <p>Every heading stays, even when the answer is "N/A, because…". A considered N/A is a record that the question was asked. The project's size sets how deep each answer goes; the outline stays the same. A weekend project gets one line per heading; a governed project links each heading to a fuller document.</p>
+
+      <h2 id="loop">The session loop</h2>
+      <p>Each working session with the AI follows the same loop:</p>
+      <ol>
+        <li><strong>Resume.</strong> The AI reads a short resumption note, which points it to the SAN and to any background notes.</li>
+        <li><strong>Work.</strong> Author and AI work through the next step. The AI proposes text; the author edits the SAN. Decisions are logged one line at a time as they happen.</li>
+        <li><strong>Hand over.</strong> At the end, the AI writes a new resumption note: what was done, the current state, decisions, open items, and where to start next time.</li>
+      </ol>
+      <p>The resumption note works like a bootloader: one instruction brings a fresh AI session up to speed. It also doubles as a sprint review.</p>
+
+      <h2 id="template">The SAN template</h2>
+      <p>The template is a single markdown file. Each heading carries a guiding question and a tag showing which method it comes from.</p>
+      <ul>
+        <li><a href="template/graszp-san-template.md" download>Download the SAN template (v0.1, markdown)</a></li>
+      </ul>
+      <p>Outline: Envision · Estimate · Promote · Direct · Initiate · Plan (Motivation, Business, Application, Technology, Migration) · Decision · Manage · Deliver · Report · Close.</p>
+
+      <h2 id="tools">Tools</h2>
+      <ul>
+        <li><strong>Obsidian</strong>, for a solo practitioner: the notes live as markdown files on your own drive. You edit in Obsidian; the AI assistant reads and writes the same files. Close a note in Obsidian before the AI writes to it.</li>
+        <li><strong>HackMD</strong>, for teams: shared, cloud-based reading and editing of the same markdown notes by several people and AI assistants.</li>
+        <li>Any tool that holds markdown and that your AI assistant can reach will do.</li>
+      </ul>
+
+      <h2 id="fits">Where graszp fits</h2>
+      <ul>
+        <li><strong>Like arc42</strong>, graszp is a fixed outline you fill to the depth the work needs. arc42 documents a software system; graszp runs a piece of work, and the system's architecture is one part of it. A graszp project can link to an arc42 document.</li>
+        <li><strong>Like TOGAF and PRINCE2</strong>, graszp uses their vocabulary, but at the scale of one person or a small team, in one note rather than a document set.</li>
+        <li><strong>For AI assistants</strong>, the note is written to be the assistant's working context, and the session loop keeps that context current from one session to the next.</li>
+      </ul>
+      <p><em>graszp is a personal method in daily use, not a standard. This section records how it relates to established methods as of November 2026, and will change as that comparison develops.</em></p>
+
+      <h2 id="contact">Contact</h2>
+      <p>graszp is developed by Joe Klemke, solution architect, through <a href="https://vernacular.cloud/">Vernacular Cloud LLC</a>. Questions, comments and examples of use are welcome: <a href="mailto:joe.klemke@vernacular.cloud">joe.klemke@vernacular.cloud</a>.</p>
     </main>
 
+    <aside>
+      <h2>At a glance</h2>
+      <ul>
+        <li><strong>Pronounced:</strong> "grasp", spelled g-r-a-s-z-p</li>
+        <li><strong>Status:</strong> template v0.1, in daily use</li>
+        <li><strong>Updated:</strong> <time datetime="2026-11-06">6 November 2026</time></li>
+        <li><strong>Licence:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
+        <li><strong>Source:</strong> <a href="https://github.com/graszp">github.com/graszp</a></li>
+        <li><strong>Also:</strong> <a href="https://vernacular.cloud/method/">vernacular.cloud/method</a></li>
+      </ul>
+      <h2>Why the name?</h2>
+      <p>To grasp is both to understand and to hold. <em>Comprehend</em> comes from the Latin for grasping together.</p>
+    </aside>
+
     <footer>
-      <small>Copyright &copy; <time datetime="2026">2026 </time>Vernacular Cloud LLC · Colorado · <a href="mailto:joe.klemke@vernacular.cloud">joe.klemke@vernacular.cloud</a></small>
+      <small>Copyright &copy; <time datetime="2026">2026</time> Vernacular Cloud LLC · Colorado · Text and template licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; site code <a href="https://github.com/graszp/graszp.com/blob/main/LICENSE">MIT</a>. "graszp" is a name of Vernacular Cloud LLC.</small>
     </footer>
 
   </body>

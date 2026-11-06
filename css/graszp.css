@@ -26,3 +26,17 @@ a, a:visited, a.internal-link, a.internal-link:visited { color: var(--graszp-lin
 code { color: var(--graszp-accent); }
 hr { border-color: #e4dccb; }
 main { border-right-color: var(--graszp-light); }
+
+/* main/aside spacing and numbered loop (P1, 2026-11-06)
+   ========================================================================== */
+body > main ol { margin: 0% 0% 0.5% 5%; padding: 0% 0% 0% 1%; line-height: 1.4em; }
+body > main ol li { margin-bottom: 0.4em; }
+body > main ul li { line-height: 1.4em; margin-bottom: 0.3em; }
+body > main > h2 { margin-top: 1.2em; }
+aside > h2 { color: var(--graszp-mid); margin-left: 2%; margin-top: 0.6em; }
+
+/* Narrow screens: stack main and aside instead of side by side */
+@media (max-width: 760px) {
+    main, aside { display: block; width: auto; float: none; margin: 0 16px; border-right: none; }
+    aside { border-top: thin dotted var(--graszp-light); margin-top: 1em; padding-top: 0.5em; }
+}
