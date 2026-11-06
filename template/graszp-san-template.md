@@ -139,6 +139,6 @@ _One entry per sprint. Sprints are time-boxes; plateaus are releases._
 - Outcomes
 - Carry-overs
 ## Project-Report-Potential
-_Capture ideas for later review in an unorganized list of potential features, qualities, requirements, decisions, constraints. Does this have a name in the the TOGAF or Agile worlds?_ 
+_Capture ideas in an unorganized list of potential features, qualities, requirements, decisions, constraints. Brainstorming notions that may--after review--feed ito the SAN or be discarded._ 
 # Project-Close
 [PRINCE2 Closing a Project · TOGAF Phase H] _How and when does it end? What is handed over, archived, or turned into a new project?_
