@@ -1,0 +1,28 @@
+/* graszp.css: the graszp colour theme.
+   Loaded AFTER core.css (as a second <link>), so it overrides the Vernacular Cloud blues.
+   The layout and type come unchanged from the vernacular.cloud stylesheets.
+   ========================================================================== */
+:root {
+    --graszp-dark:   #1f4d3a;   /* deep green: site title, page title */
+    --graszp-mid:    #2e6b4f;   /* h2 */
+    --graszp-light:  #3d7a5c;   /* h3 and below */
+    --graszp-link:   #1a6b4a;
+    --graszp-accent: #b5651d;   /* warm accent: code, rules */
+    --graszp-paper:  #fbfaf6;   /* off-white background */
+}
+
+body { background-color: var(--graszp-paper); }
+
+/* Site title: the brand is always lowercase */
+body > header > h1 { color: var(--graszp-dark); text-transform: lowercase; letter-spacing: 0.02em; }
+body > header > h1 a, body > header > h1 a:visited { color: inherit; }
+
+body > main > h1 { color: var(--graszp-dark); }
+body > main > h2 { color: var(--graszp-mid); }
+body > main > h3, body > main > h4, body > main > h5, body > main > h6 { color: var(--graszp-light); }
+
+a, a:visited, a.internal-link, a.internal-link:visited { color: var(--graszp-link); }
+
+code { color: var(--graszp-accent); }
+hr { border-color: #e4dccb; }
+main { border-right-color: var(--graszp-light); }

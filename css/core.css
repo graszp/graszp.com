@@ -1,0 +1,58 @@
+/* core.css styles the general page layout and manages the inclusion of additional css files
+    ========================================================================== */
+    @import url("headings.css");
+    @import url("list-para-nav.css");
+    @import url("table.css"); 
+    @import url("font.css");
+
+    /* Color CSS, uncomment if desired for debugging
+        ========================================================================== */
+    /* @import url("debug-color.css"); */
+        
+    /* Generic Elements 
+        ========================================================================== */
+    img{display:block;}
+    em{font-style: italic;}
+    strong{font-weight:bold;}
+    hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10px;}
+    code{color:#0B8C8F;}
+    .important a{font-weight:bold;}
+
+    a {color: darkblue; text-decoration: none; }
+    a:focus, a:hover {text-decoration:underline; }
+    /* a:focus{ background-color: khaki; } */
+    a:visited {color: darkblue; }
+
+    cite{display:block; text-align:right; padding-top: 10px; }
+
+    .callout{font-size:189%;color:#999999; font-style:italic; }
+    .callout cite{display:block; text-align:right;padding-top: 30px; font-size:69.25%; }
+    .callout span.quot{font-size: 500%; vertical-align: sub; color:#e2e2e2; line-height:25px; font-weight:bold; } 
+    .callout span.quotLast{vertical-align:middle; }
+    .detail{color: #777; font-size:11px;display:block; }
+
+    .icon{margin-right: 5px; }
+
+    /* Core Structure (margin and padding for body, header, main, aside, footer, section, article) 
+   ========================================================================== */
+
+    main {display:inline-block; width: 73%; margin: 0% 0% 0% 1%; padding: 0% 0% 0% 0%; border-right: thin dotted black; }
+    aside {display:inline-block; width: 25%; float:right;}
+
+    body > header {margin: 0% 0% 0% 0%; }
+
+    section { width: 30%; float: left; }
+    section { margin: 0% 0% 1% 2% ;  padding: 0% 0% 0% 1%; }
+    section > header { margin: 0% 0% 0% 0% ;  padding: 0% 0% 0% 0%; }
+    section > table { margin: 1% 0% 0% 1% ;  padding: 0% 0% 1% 0%; }
+
+    main div.stacked-subsection { width: 29%; float: left;  margin: 0% 0% 0% 0% ;  padding: 0% 1% 0% 0%; } 
+    main div.stacked-subsection section { width: 320%; float: left; } 
+
+    article > header { margin: 0% 0% 0% 0% ;  padding: 0% 0% 0% 0%; }
+    article > * { margin: 0% 0% 0% 1% ;  padding: 0% 0% 0.5% 0%; }
+
+    aside header {margin: 0 0 0 0; padding: 0 0 0 0; }
+
+    body > footer {width: 95%; height: 5%;  margin: 0 0 0 0; display:grid; place-items: center; }
+    body > footer  > *  {margin-left:2%; margin-top: 0; }
