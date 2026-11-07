@@ -8,6 +8,7 @@ Plain static HTML and CSS, published by GitHub Pages from the `main` branch (roo
 - `css/`: layout and type copied from the vernacular.cloud stylesheets; `css/graszp.css` holds the graszp colours and loads last
 - `CNAME`: the custom domain for GitHub Pages
 - `.nojekyll`: serve files as they are (no Jekyll build)
+- `publish_template.py`: releases the SAN template from the vault note 94.06.01 (the single source) when its `Template version:` is bumped; `python publish_template.py` to check, `--publish` to copy
 - `serve_localhost.py`: local preview before a push: `python serve_localhost.py` opens http://localhost:8001/
 
 ## Licences
