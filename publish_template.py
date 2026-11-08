@@ -9,15 +9,25 @@ Usage:
     python publish_template.py --publish  copy a new version to the site and update index.html
 Then review, commit and push as usual.
 """
+import os
 import re
 import sys
 from pathlib import Path
 
-VAULT_TEMPLATE = Path(
+
+def long_path(path):
+    """Add the Windows long-path prefix: without it, paths over 260 characters (the vault template) are not found."""
+    prefix = "\\\\?\\"
+    if os.name == "nt" and not str(path).startswith(prefix):
+        return Path(prefix + str(path))
+    return path
+
+
+VAULT_TEMPLATE = long_path(Path(
     r"C:\Users\joekl\Dropbox\Knowledge Mgt\Personal Knowledge Mgt\00 to 09 Metadata\09 Archive"
     r"\Obsidian Markdown\The Big Picture\90 to 99 Projects\94 Career and Ambition"
     r"\94.06 Solution Architecture portfolio\94.06.01 maintain template for Solution Architecture Note (SAN).md"
-)
+))
 SITE_DIR = Path(__file__).resolve().parent
 SITE_TEMPLATE = SITE_DIR / "template" / "graszp-san-template.md"
 INDEX = SITE_DIR / "index.html"
