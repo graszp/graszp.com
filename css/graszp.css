@@ -2,6 +2,9 @@
    Loaded AFTER core.css (as a second <link>), so it overrides the Vernacular Cloud blues.
    The layout and type come unchanged from the vernacular.cloud stylesheets.
    ========================================================================== */
+/* Dark mode (2026-11-15): theme.css (imported by core.css) sets the shared
+   --vc-* variables; this file points them at the graszp greens, for light and dark.
+   It must keep its own dark block, because these :root rules come after theme.css. */
 :root {
     --graszp-dark:   #1f4d3a;   /* deep green: site title, page title */
     --graszp-mid:    #2e6b4f;   /* h2 */
@@ -9,9 +12,42 @@
     --graszp-link:   #1a6b4a;
     --graszp-accent: #b5651d;   /* warm accent: code, rules */
     --graszp-paper:  #fbfaf6;   /* off-white background */
+    --graszp-ink:    #1d1d1f;
+    --graszp-hr:     #e4dccb;
 }
 
-body { background-color: var(--graszp-paper); }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --graszp-dark:   #a8d5bd;
+        --graszp-mid:    #93c4a9;
+        --graszp-light:  #86b89c;
+        --graszp-link:   #7fcfa6;
+        --graszp-accent: #e0a060;
+        --graszp-paper:  #18201c;
+        --graszp-ink:    #dcdcd4;
+        --graszp-hr:     #3a4038;
+        --vc-muted:        #a3a3a0;
+        --vc-subtle:       #b5b5b0;
+        --vc-faint:        #8e8e8a;
+        --vc-callout:      #8a8a86;
+        --vc-table-border: #3a443e;
+    }
+}
+
+/* the shared variables, pointed at the greens */
+:root {
+    --vc-paper:   var(--graszp-paper);
+    --vc-ink:     var(--graszp-ink);
+    --vc-h1:      var(--graszp-dark);
+    --vc-h2:      var(--graszp-mid);
+    --vc-h3:      var(--graszp-light);
+    --vc-link:    var(--graszp-link);
+    --vc-code:    var(--graszp-accent);
+    --vc-rule:    var(--graszp-hr);
+    --vc-divider: var(--graszp-light);
+}
+
+body { background-color: var(--graszp-paper); color: var(--graszp-ink); }
 
 /* Site title: the brand is always lowercase */
 body > header > h1 { color: var(--graszp-dark); text-transform: lowercase; letter-spacing: 0.02em; }
@@ -24,7 +60,7 @@ body > main > h3, body > main > h4, body > main > h5, body > main > h6 { color: 
 a, a:visited, a.internal-link, a.internal-link:visited { color: var(--graszp-link); }
 
 code { color: var(--graszp-accent); }
-hr { border-color: #e4dccb; }
+hr { border-color: var(--graszp-hr); }
 main { border-right-color: var(--graszp-light); }
 
 /* main/aside spacing and numbered loop (P1, 2026-11-06)
