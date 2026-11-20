@@ -42,11 +42,17 @@
           "alternateName": "graszp solution architecture method",
           "description": "The whole project in one markdown note, with a fixed outline distilled from TOGAF, ArchiMate, PRINCE2, Scrum, ITIL and the Microsoft Solutions Framework, kept current by a session loop between author and AI assistant.",
           "url": "https://graszp.com/",
-          "dateModified": "2026-11-07",
+          "dateModified": "2026-11-20",
           "license": "https://creativecommons.org/licenses/by/4.0/",
           "author": { "@type": "Person", "name": "Joe Klemke", "sameAs": ["https://github.com/jklemke", "https://www.linkedin.com/in/joeklemke/"] },
           "publisher": { "@id": "https://vernacular.cloud/#organization" },
           "keywords": ["solution architecture", "AI assistant", "project management", "TOGAF", "ArchiMate", "PRINCE2", "Scrum", "arc42", "markdown"],
+          "workExample": {
+            "@type": "Dataset",
+            "name": "Badinagean Nomenclature",
+            "description": "The philosophical vocabulary of Victor Badinage as a SKOS concept scheme in JSON-LD, built and maintained with graszp.",
+            "url": "https://graszp.info/"
+          },
           "hasPart": {
             "@type": "DigitalDocument",
             "name": "graszp SAN template v0.2",
@@ -86,37 +92,42 @@
       <p><strong>graszp</strong> is a lightweight solution architecture method for working with an AI assistant.</p>
 
       <h2 id="what">What it is</h2>
-      <p>A whole project lives in one markdown note, the <em>Solution Architecture Note</em> (SAN). Its fixed outline is distilled from TOGAF, ArchiMate, PRINCE2, Scrum, ITIL and the Microsoft Solutions Framework: why the work matters, who it is for, the plan from business down to technology, the decisions, the delivery, and the sprints.</p>
+      <p>With graszp, an entire project lives in one markdown note, the <em>Solution Architecture Note</em> (SAN). Its fixed outline is distilled from TOGAF, ArchiMate, PRINCE2, Scrum, ITIL and the Microsoft Solutions Framework: why the work matters, who it is for, the plan from business down to technology, the decisions, the delivery, and the sprints.</p>
       <p>Every heading stays, even when the answer is "N/A, because…". A considered N/A is a record that the question was asked. The project's size sets how deep each answer goes; the outline stays the same. A weekend project gets one line per heading; a governed project links each heading to a fuller document.</p>
+      <p>The solution and the AI's context stay under <em>your</em> control: plain markdown you write, read and keep, on your own drive or in your team's workspace.</p>
 
       <h2 id="loop">The session loop</h2>
       <p>Each working session with the AI follows the same loop:</p>
       <ol>
         <li><strong>Resume.</strong> The AI reads a short resumption note, which points it to the SAN and to any background notes.</li>
         <li><strong>Work.</strong> Author and AI work through the next step. The AI proposes text; the author edits the SAN. Decisions are logged one line at a time as they happen.</li>
-        <li><strong>Hand over.</strong> At the end, the AI writes a new resumption note: what was done, the current state, decisions, open items, and where to start next time.</li>
+        <li><strong>Sweep and hand over.</strong> At a break or at the end, the AI files what the session produced (decisions, outcomes, side notes) into the SAN and the notes they belong in, then writes the resumption note: what was done, the current state, open items, and where to start next time. The author reviews every change, and whether a sweep is light or heavy is the author's call.</li>
       </ol>
       <p>The resumption note works like a bootloader: one instruction brings a fresh AI session up to speed. It also doubles as a sprint review.</p>
 
       <h2 id="template">The SAN template</h2>
       <p>The template is a single markdown file. Each heading carries a guiding question and a tag showing which method it comes from.</p>
+      <p>The SAN outline: Envision · Estimate · Promote · Direct · Initiate · Plan (Motivation, Business, Application, Technology, Migration) · Decision · Manage · Deliver · Report · Close.</p>
       <ul>
         <li><a href="template/graszp-san-template.md" download>Download the SAN template (v0.2, markdown)</a></li>
       </ul>
-      <p>Outline: Envision · Estimate · Promote · Direct · Initiate · Plan (Motivation, Business, Application, Technology, Migration) · Decision · Manage · Deliver · Report · Close.</p>
 
       <h2 id="tools">Tools</h2>
       <ul>
         <li><strong>Obsidian</strong>, for a solo practitioner: the notes live as markdown files on your own drive. You edit in Obsidian; the AI assistant reads and writes the same files. Close a note in Obsidian before the AI writes to it.</li>
-        <li><strong>HackMD</strong>, for teams: shared, cloud-based reading and editing of the same markdown notes by several people and AI assistants.</li>
+        <li><strong>HackMD</strong>, for teams: shared, cloud-based reading and editing of the same markdown notes by multiple people and their AI assistants.</li>
         <li>Any tool that holds markdown and that your AI assistant can reach will do.</li>
       </ul>
 
+      <h2 id="reference-case">Reference case</h2>
+      <p><a href="https://graszp.info/">graszp.info</a> shows graszp in use on a real project: the Badinagean Nomenclature, the philosophical vocabulary of Victor Badinage, published as a SKOS concept scheme in JSON-LD with permanent concept IRIs. Its structure, releases, and hosting are planned, decided and recorded in a graszp SAN.</p>
+
       <h2 id="fits">Where graszp fits</h2>
       <ul>
-        <li><strong>Like arc42</strong>, graszp is a fixed outline you fill to the depth the work needs. arc42 documents a software system; graszp runs a piece of work, and the system's architecture is one part of it. A graszp project can link to an arc42 document.</li>
+        <li><strong>Like <a href="https://arc42.org/">arc42</a></strong>, graszp is a fixed outline you fill to the depth the work needs. arc42 documents a software system; graszp documents a whole solution and runs the work on it, and the system's architecture is one part of it. A graszp project can link to an arc42 document.</li>
+        <li><strong>Like <a href="https://github.com/graphify-labs/graphify">graphify</a></strong>, graszp gives an AI assistant a persistent map, so a new session doesn't rediscover the project from scratch. graphify maps a codebase as a generated knowledge graph; graszp maps the whole solution, from why it matters to how it closes, in one note the author writes.</li>
         <li><strong>Like TOGAF and PRINCE2</strong>, graszp uses their vocabulary, but at the scale of one person or a small team, in one note rather than a document set.</li>
-        <li><strong>For AI assistants</strong>, the note is written to be the assistant's working context, and the session loop keeps that context current from one session to the next.</li>
+        <li><strong>For AI assistants</strong>, the SAN is written to be the assistant's working context; the resumption note brings each new session up to speed, and sweeps keep both current.</li>
       </ul>
       <p><em>graszp is a personal method in daily use, not a standard. This section records how it relates to established methods as of November 2026, and will change as that comparison develops.</em></p>
 
@@ -129,13 +140,14 @@
       <ul>
         <li><strong>Pronounced:</strong> "grasp", spelled g-r-a-s-z-p</li>
         <li><strong>Status:</strong> template v0.2, in daily use</li>
-        <li><strong>Updated:</strong> <time datetime="2026-11-07">7 November 2026</time></li>
+        <li><strong>Updated:</strong> <time datetime="2026-11-20">20 November 2026</time></li>
         <li><strong>Licence:</strong> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
         <li><strong>Source:</strong> <a href="https://github.com/graszp">github.com/graszp</a></li>
+        <li><strong>Reference case:</strong> <a href="https://graszp.info/">graszp.info</a></li>
         <li><strong>Also:</strong> <a href="https://vernacular.cloud/method/">vernacular.cloud/method</a></li>
       </ul>
       <h2>Why the name?</h2>
-      <p>To grasp is both to understand and to hold. <em>Comprehend</em> comes from the Latin for grasping together.</p>
+      <p>To grasp is to understand and to hold: to <em>comprehend</em> (Latin, "to grasp together") and to get a grip.</p>
     </aside>
 
     <footer>
