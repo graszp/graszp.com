@@ -26,7 +26,7 @@ def long_path(path):
 VAULT_TEMPLATE = long_path(Path(
     r"C:\Users\joekl\Dropbox\Knowledge Mgt\Personal Knowledge Mgt\00 to 09 Metadata\09 Archive"
     r"\Obsidian Markdown\The Big Picture\90 to 99 Projects\94 Career and Ambition"
-    r"\94.06 Solution Architecture portfolio\94.06.01 maintain template for Solution Architecture Note (SAN).md"
+    r"\94.06 Solution Architecture portfolio\94.06.01 template for Solution Architecture Note (SAN).md"
 ))
 SITE_DIR = Path(__file__).resolve().parent
 SITE_TEMPLATE = SITE_DIR / "template" / "graszp-san-template.md"

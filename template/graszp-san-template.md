@@ -2,7 +2,7 @@
 graszp SAN template, from https://graszp.com
 Licence: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Credit: graszp.com, Vernacular Cloud LLC.
 
-Template version: 0.2 (2026-11-07)
+Template version: 0.3 (2026-11-22)
 
 Sources:
 - TOGAF ADM (phases A–H)
@@ -13,16 +13,21 @@ Sources:
 - Microsoft Solutions Framework (Envision).  
 
 [!info] Conventions 
-1. Never delete a heading. If it does not apply, write "N/A — <reason>". A considered N/A is a governance trace.
+1. Never delete a heading. If it does not apply, write "N/A — <reason>" or leave as-is. A considered N/A is a trace for high governance projects.
 2. Depth is the dial, not the outline. Small/agile project: one line per heading. Governed project: link each heading to a fuller artifact (model, register, spec). 
 3. Questions in *italics* are prompts. Replace them with answers; keep them only while a heading is unanswered.
 4. The AI reads this note first and proposes text; the author edits the note. 
 5. Tags in [brackets] show where a heading came from. Keep or delete them as you like.
 6. IDs: decisions D-001, plateaus P-001, sprints S-001, numbered in order and never reused.
+7. A convenient way of recording a potential project is to draft a new note with only Project-Envision and Project-Potential
 
 Changes
+- 0.3 (2026-11-22) moved Project-Report-Potential to Project-Potential
 - 0.2 (2026-11-07): plateau IDs (P-001); sprints and plateaus are many-to-many; sprint goals as checkboxes; typo and formatting fixes.
 - 0.1 (2026-10-28): first version.
+
+Ideas for next version:
+
 -->
 # Project-Envision
 [TOGAF Phase A Architecture Vision · MSF Envisioning] _What is this project trying to accomplish, in a high level summary? What does "done" look like from the outside?_ _Is this a pilot or reference case for something larger?_
@@ -146,7 +151,7 @@ _One entry per sprint. Sprints are time-boxed work packages; plateaus are stable
 - Decisions (D-ids)
 - Outcomes
 - Carry-overs
-## Project-Report-Potential
-_Capture ideas in an unorganized list of potential features, qualities, requirements, decisions, constraints. Brainstorming notions that may, after review, feed into the SAN or be discarded._ 
+# Project-Potential
+[Scrum backlog · agile stories · brainstorming] _Capture ideas in an unorganized list of potential projects, features, qualities, requirements, decisions, constraints. Brainstorming notions that may, after review, feed into the SAN or be discarded._ 
 # Project-Close
 [PRINCE2 Closing a Project · TOGAF Phase H] _How and when does it end? What is handed over, archived, or turned into a new project?_
